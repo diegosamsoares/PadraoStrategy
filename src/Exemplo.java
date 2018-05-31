@@ -11,7 +11,8 @@ public class Exemplo {
 			int distancia = entrada.nextInt();
 			System.out.print("Qual o tipo de frete (1) Normal, (2) Sedex , (3) Especial :");
 			int opcaoFrete = entrada.nextInt();
-			TipoFrete tipoFrete = TipoFrete.values()[opcaoFrete - 1];
+			TipoFrete[] TipoFreteArray = TipoFrete.values();
+			TipoFrete tipoFrete = TipoFreteArray[opcaoFrete-1];
 			
 			Frete frete = tipoFrete.obterFrete();
 			double preco = frete.calcularPreco(distancia);
